@@ -12,10 +12,15 @@
     <!--label(가로, 세로), input(가로, 세로), buttob-->
     <label for="length">가로:</label>
     <!--for는 input 과 연결시켜주는 역할-->
-    <input type="number" id="length" name="length" required />
+    <input
+      type="number"
+      id="length"
+      name="length"
+      placeholder="가로 길이 입력"
+    />
 
     <label for="width">세로:</label>
-    <input type="number" id="width" name="width" required />
+    <input type="number" id="width" name="width" placeholder="세로 길이 입력" />
 
     <!--버튼: 계산하는 함수 호출-->
     <button type="button" onclick="calculate()">계산</button>
