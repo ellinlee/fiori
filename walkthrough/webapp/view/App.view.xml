@@ -1,0 +1,20 @@
+<!-- 
+설명: 이 XML 파일은 애플리케이션을 위한 SAPUI5 뷰를 정의합니다. 
+"sap.m" 라이브러리를 모바일 컨트롤에 사용하고 "sap.ui.core.mvc"를 MVC 프레임워크에 사용합니다.
+
+네임스페이스:
+- xmlns="sap.m": SAPUI5 모바일 컨트롤을 위한 기본 네임스페이스를 정의합니다.
+- xmlns:mvc="sap.ui.core.mvc": SAPUI5 MVC 프레임워크를 위한 네임스페이스를 정의합니다.
+-->
+
+
+<!--컨트롤러 연결  -->
+<mvc:View
+controllerName="ui5.walkthrough.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"> <!--별칭은 마지막 단어로 설정 여기서는 mvc가 별칭으로 적용-->
+    <!-- <Text text="Hello World"/> sap.m의 요소 -->
+     <Button
+      text="Say Hello"
+      press=".onShowHello"/> <!--이벤트는 'on'이랑 함께 작성-->
+</mvc:View>

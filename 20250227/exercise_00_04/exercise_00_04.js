@@ -10,16 +10,14 @@ function calculate() {
   var userInput1 = document.getElementById("length").value;
   var userInput2 = document.getElementById("width").value;
 
-  // 면적 계산 후 출력ls
+  // 면적 계산 후 출력
 
   if (userInput1 == "" || userInput2 == "") {
     let message = "없음";
     document.getElementById("area").innerHTML = message; //문장 그냥 여기다 넣으면 오류남.
-    return;
   } else {
     var area = calculateArea(userInput1, userInput2);
     let string = `${area} 제곱미터`;
-    debugger;
     document.getElementById("area").innerHTML = string;
   }
 }
