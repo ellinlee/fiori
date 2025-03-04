@@ -1,0 +1,15 @@
+<mvc:View controllerName="sync.d17.exercise1705.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Shell id="uniqueShellId">
+        <Page id="page1" title="{i18n>title}">
+            <content>
+                <Label id="label1" text="입력하세요" required="true">
+                </Label>
+                <Input id="input1" value="{/input}" valueLiveUpdate="true" width="60%"></Input>
+                <Button id="button1" text="{i18n>showMessageButtonShow}" press=".onPress">
+                </Button>
+            </content>
+        </Page>
+    </Shell>
+</mvc:View>

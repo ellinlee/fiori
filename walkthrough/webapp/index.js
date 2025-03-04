@@ -15,12 +15,32 @@
 // });
 
 //비동기 처리
-sap.ui.define(["sap/ui/core/mvc/XMLView"], (XMLView) => {
+// sap.ui.define(["sap/ui/core/mvc/XMLView"], (XMLView) => {
+//   "use strict";
+
+//   //뷰와 컨트롤러 연결
+//   XMLView.create({
+//     viewName: "ui5.walkthrough.view.App",
+//   }).then((oView) => oView.placeAt("content"));
+//   //xml 뷰 생성 성공 시 place at 처리 (.then의 의미 -)
+// });
+
+// sap.ui.define(["sap/ui/core/mvc/XMLView"], (XMLView) => {
+//   "use strict";
+
+//   XMLView.create({
+//     viewName: "ui5.walkthrough.view.App",
+//   }).then((oView) => oView.placeAt("content"));
+// });
+
+sap.ui.define(["sap/ui/core/ComponentContainer"], (ComponentContainer) => {
   "use strict";
 
-  //뷰와 컨트롤러 연결
-  XMLView.create({
-    viewName: "ui5.walkthrough.view.App",
-  }).then((oView) => oView.placeAt("content"));
-  //xml 뷰 생성 성공 시 place at 처리 (.then의 의미 -)
+  new ComponentContainer({
+    name: "ui5.walkthrough",
+    settings: {
+      id: "walkthrough",
+    },
+    async: true,
+  }).placeAt("content");
 });

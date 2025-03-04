@@ -7,14 +7,24 @@
 - xmlns:mvc="sap.ui.core.mvc": SAPUI5 MVC 프레임워크를 위한 네임스페이스를 정의합니다.
 -->
 
-
 <!--컨트롤러 연결  -->
-<mvc:View
-controllerName="ui5.walkthrough.controller.App"
+<mvc:View controllerName="ui5.walkthrough.controller.App"
    xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc"> <!--별칭은 마지막 단어로 설정 여기서는 mvc가 별칭으로 적용-->
-    <!-- <Text text="Hello World"/> sap.m의 요소 -->
-     <Button
-      text="Say Hello"
-      press=".onShowHello"/> <!--이벤트는 'on'이랑 함께 작성-->
+   xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+   <Shell>
+      <!-- 색 지정 가능 -->
+      <App backgroundColor="red" class="myAppDemoWT">
+         <pages>
+            <Page title="{i18n>homePageTitle}">
+               <content>
+                  <mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
+               </content>
+            </Page>
+         </pages>
+      </App>
+   </Shell>
 </mvc:View>
+
+<!--모델명 사용하고 싶다면 아래와 같이 선언 필요-->
+<!--value = "{myModel>/recipient/name}"
+description ="hello {myModel>/recipient/name}"-->
