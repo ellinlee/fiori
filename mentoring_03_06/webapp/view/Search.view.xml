@@ -1,0 +1,23 @@
+<mvc:View xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Panel id="panel1"
+        headerText="{i18n>searchTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto">
+        <content>
+            <Label id="text1"
+                text="{i18n>productName}"
+                class="sapUiSmallMargin"
+                required="true"/>
+            <Input id="input1"
+                value="{/input}"
+                valueLiveUpdate="true"
+                width="50%"
+                class="sapUiSmallMargin"/>
+            <Button id="button1"
+                text="{i18n>searchButton}"
+                press="onPress"
+                class="sapUiSmallMargin"/>
+        </content>
+    </Panel>
+</mvc:View>

@@ -1,0 +1,18 @@
+<mvc:View controllerName="sync.d17.mentoring0306.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <App id="app">
+        <pages>
+            <Page id="page1"
+                title="{i18n>homePageTitle}">
+                <content>
+                    <mvc:XMLView id="view1"
+                        viewName="sync.d17.mentoring0306.view.Search"></mvc:XMLView>
+                    <mvc:XMLView id="view2"
+                        viewName="sync.d17.mentoring0306.view.ProductsList"></mvc:XMLView>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>

@@ -19,10 +19,136 @@
       "program": "${workspaceFolder}\\20250227\\exercise_00_04\\exercise_00_04.js"
     },
     {
-        "name": "Start project1",
+      "name": "Start project1",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/project1",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": ["fiori", "run"],
+      "args": ["--open", "test/flpSandbox.html#project1-display"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "DEBUG": "--inspect",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+      }
+    },
+    {
+      "name": "Start project1 Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/project1",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": ["fiori", "run"],
+      "args": [
+        "--config",
+        "./ui5-local.yaml",
+        "--open",
+        "test/flpSandbox.html#project1-display"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+      }
+    },
+    {
+      "name": "Start exercise17_05",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/exercise17_05",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": ["fiori", "run"],
+      "args": ["--open", "test/flpSandbox.html#exercise1705-display"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "DEBUG": "--inspect",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+      }
+    },
+    {
+      "name": "Start exercise17_05 Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/exercise17_05",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": ["fiori", "run"],
+      "args": [
+        "--config",
+        "./ui5-local.yaml",
+        "--open",
+        "test/flpSandbox.html#exercise1705-display"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+      }
+    },
+    {
+      "name": "Start exercise17_05",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/exercise17_05",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": ["fiori", "run"],
+      "args": ["--open", "test/flpSandbox.html#syncd17exercise1705-display"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "DEBUG": "--inspect",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+      }
+    },
+    {
+      "name": "Start exercise17_05 Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/exercise17_05",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": ["fiori", "run"],
+      "args": [
+        "--config",
+        "./ui5-local.yaml",
+        "--open",
+        "test/flpSandbox.html#syncd17exercise1705-display"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+      }
+    },
+    {
+        "name": "Start exercise06_05",
         "type": "node",
         "request": "launch",
-        "cwd": "${workspaceFolder}/project1",
+        "cwd": "${workspaceFolder}/exercise06_05",
         "runtimeExecutable": "npx",
         "windows": {
             "runtimeExecutable": "npx.cmd"
@@ -33,7 +159,7 @@
         ],
         "args": [
             "--open",
-            "test/flpSandbox.html#project1-display"
+            "test/flpSandbox.html#syncd17exercise0605-display"
         ],
         "console": "internalConsole",
         "internalConsoleOptions": "openOnSessionStart",
@@ -44,10 +170,10 @@
         }
     },
     {
-        "name": "Start project1 Local",
+        "name": "Start exercise06_05 Local",
         "type": "node",
         "request": "launch",
-        "cwd": "${workspaceFolder}/project1",
+        "cwd": "${workspaceFolder}/exercise06_05",
         "runtimeExecutable": "npx",
         "windows": {
             "runtimeExecutable": "npx.cmd"
@@ -60,7 +186,7 @@
             "--config",
             "./ui5-local.yaml",
             "--open",
-            "test/flpSandbox.html#project1-display"
+            "test/flpSandbox.html#syncd17exercise0605-display"
         ],
         "console": "internalConsole",
         "internalConsoleOptions": "openOnSessionStart",
@@ -70,10 +196,10 @@
         }
     },
     {
-        "name": "Start exercise17_05",
+        "name": "Start exercise17_06",
         "type": "node",
         "request": "launch",
-        "cwd": "${workspaceFolder}/exercise17_05",
+        "cwd": "${workspaceFolder}/exercise17_06",
         "runtimeExecutable": "npx",
         "windows": {
             "runtimeExecutable": "npx.cmd"
@@ -84,7 +210,7 @@
         ],
         "args": [
             "--open",
-            "test/flpSandbox.html#exercise1705-display"
+            "test/flpSandbox.html#syncd17exercise1706-display"
         ],
         "console": "internalConsole",
         "internalConsoleOptions": "openOnSessionStart",
@@ -95,10 +221,10 @@
         }
     },
     {
-        "name": "Start exercise17_05 Local",
+        "name": "Start exercise17_06 Local",
         "type": "node",
         "request": "launch",
-        "cwd": "${workspaceFolder}/exercise17_05",
+        "cwd": "${workspaceFolder}/exercise17_06",
         "runtimeExecutable": "npx",
         "windows": {
             "runtimeExecutable": "npx.cmd"
@@ -111,7 +237,7 @@
             "--config",
             "./ui5-local.yaml",
             "--open",
-            "test/flpSandbox.html#exercise1705-display"
+            "test/flpSandbox.html#syncd17exercise1706-display"
         ],
         "console": "internalConsole",
         "internalConsoleOptions": "openOnSessionStart",
@@ -121,10 +247,10 @@
         }
     },
     {
-        "name": "Start exercise17_05",
+        "name": "Start mentoring_03_06",
         "type": "node",
         "request": "launch",
-        "cwd": "${workspaceFolder}/exercise17_05",
+        "cwd": "${workspaceFolder}/mentoring_03_06",
         "runtimeExecutable": "npx",
         "windows": {
             "runtimeExecutable": "npx.cmd"
@@ -135,7 +261,7 @@
         ],
         "args": [
             "--open",
-            "test/flpSandbox.html#syncd17exercise1705-display"
+            "test/flpSandbox.html#syncd17mentoring0306-display"
         ],
         "console": "internalConsole",
         "internalConsoleOptions": "openOnSessionStart",
@@ -146,10 +272,10 @@
         }
     },
     {
-        "name": "Start exercise17_05 Local",
+        "name": "Start mentoring_03_06 Local",
         "type": "node",
         "request": "launch",
-        "cwd": "${workspaceFolder}/exercise17_05",
+        "cwd": "${workspaceFolder}/mentoring_03_06",
         "runtimeExecutable": "npx",
         "windows": {
             "runtimeExecutable": "npx.cmd"
@@ -162,7 +288,7 @@
             "--config",
             "./ui5-local.yaml",
             "--open",
-            "test/flpSandbox.html#syncd17exercise1705-display"
+            "test/flpSandbox.html#syncd17mentoring0306-display"
         ],
         "console": "internalConsole",
         "internalConsoleOptions": "openOnSessionStart",
