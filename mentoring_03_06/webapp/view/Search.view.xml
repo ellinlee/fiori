@@ -7,17 +7,17 @@
         <content>
             <Label id="text1"
                 text="{i18n>productName}"
-                class="sapUiSmallMargin"
-                required="true"/>
+                class="sapUiSmallMargin" />
             <Input id="input1"
                 value="{/input}"
                 valueLiveUpdate="true"
                 width="50%"
-                class="sapUiSmallMargin"/>
+                class="sapUiSmallMargin"
+                textAlign="Left"/>
             <Button id="button1"
                 text="{i18n>searchButton}"
                 press="onPress"
-                class="sapUiSmallMargin"/>
+                class="sapUiSmallMargin" />
         </content>
     </Panel>
 </mvc:View>

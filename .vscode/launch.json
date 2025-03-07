@@ -296,6 +296,57 @@
         "env": {
             "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
         }
+    },
+    {
+        "name": "Start mentoring_03_06_adv",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/mentoring_03_06_adv",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--open",
+            "test/flpSandbox.html#syncd17mentoring0306adv-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "DEBUG": "--inspect",
+            "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+        }
+    },
+    {
+        "name": "Start mentoring_03_06_adv Local",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/mentoring_03_06_adv",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--config",
+            "./ui5-local.yaml",
+            "--open",
+            "test/flpSandbox.html#syncd17mentoring0306adv-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+        }
     }
   ]
 }
