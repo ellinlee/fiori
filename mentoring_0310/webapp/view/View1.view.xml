@@ -1,0 +1,22 @@
+<mvc:View controllerName="mentoring0310.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <List headerText="{i18n>title}"
+        id="list1"
+        class="sapUiResponsiveMargin"
+        width="auto">
+
+        <headerToolbar>
+            <Toolbar id="toolbar1">
+
+                <Title id ='toolbar_title'
+                    text="{i18n>toolbartitle}">
+                </Title>
+                <CheckBox id='checkbox1'
+                    text="배송완료"></CheckBox>
+
+            </Toolbar>
+        </headerToolbar>
+    </List>
+</mvc:View>
