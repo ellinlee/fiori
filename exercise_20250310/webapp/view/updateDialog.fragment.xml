@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="updateDialog"
+        title="Selected Data">
+        <content>
+            <VBox id='vbox_dialog'>
+                <Label id='label_name_dialog'
+                    text="Name"></Label>
+                <Input id='input_carrname_dialog'
+                    width='50%'
+                    value="{updateModel>/Carrname}"></Input>
+                <Label id='label_url_dialog'
+                    text="URL"></Label>
+                <Input id='input_url_dialog'
+                    width='50%'
+                    value="{updateModel>/Url}"></Input>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button id='close_button_dialog'
+                text="Close"
+                press=".onCloseDialog"/>
+        </beginButton>
+        <endButton>
+            <Button id='update_button_dialog'
+                text="Update"
+                press=".onUpdateDialog"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

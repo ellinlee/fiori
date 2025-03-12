@@ -1,0 +1,57 @@
+<mvc:View controllerName="exercise20250310.controller.Search"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Panel id='panel1'>
+        <FlexBox id='flexbox'
+            direction="Column">
+            <Text id='label_carrid'
+                text='Carrid'></Text>
+            <Input id='input_carrid'
+                liveChange="true"
+                textAlign="Initial"
+                placeholder="carrid를 입력하세요"
+                width="30%">
+            </Input>
+            <Text id='label_carrname'
+                text='Carrname'></Text>
+            <Input id='input_carrname'
+                textAlign="Initial"
+                liveChange="true"
+                placeholder="carrname을 입력하세요"
+                width="30%"
+                value="">
+            </Input>
+            <Text id='label_currcode'
+                text='Currcode'></Text>
+            <Input id='input_currcode'
+                textAlign="Initial"
+                liveChange="true"
+                placeholder="currcode를 입력하세요"
+                width="30%"
+                value="">
+            </Input>
+            <Text id='label_url'
+                text='URL'></Text>
+            <Input id='input_url'
+                textAlign="Initial"
+                liveChange="true"
+                placeholder="url를 입력하세요"
+                width="30%"
+                value="">
+            </Input>
+        </FlexBox>
+        <Button id='create_button'
+            text="Create Entry"
+            type="Emphasized"
+            press="onPress"></Button>
+        <Button id='delete_button'
+            text="Delete Entry"
+            type="Emphasized"
+            press="onDelete"></Button>
+        <Button id='update_button'
+            text='Update'
+            type='Emphasized'
+            press="onUpdate"></Button>
+    </Panel>
+</mvc:View>

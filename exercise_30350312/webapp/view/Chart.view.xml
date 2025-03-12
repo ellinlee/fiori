@@ -1,0 +1,96 @@
+<mvc:View controllerName="exercise30350312.controller.Chart"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:layout="sap.ui.layout"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds">
+    <Page id='page1'
+        title="[D17] Chart">
+        <content>
+            <viz:VizFrame                 
+                id ='idLineChart'
+                vizProperties="{title:{ text:'Monthly Sales Trend'},
+                    plotArea: {
+                        colorPalette: ['#E63946', '#F4A261', '#2A9D8F', '#264653', '#8E44AD'],
+                        dataLabel: {
+                            visible: true
+                        }
+                    },
+                    legend: {
+                        visible: true,
+                        position: 'bottom'
+                    }
+                }"
+                vizType="line"
+                width="100%"
+                height="300px">
+                <viz:dataset>
+                    <viz.data:FlattenedDataset id ='flattened_dataset1'
+                        data="{chart>/salesData}">
+                        <!-- x축 -->
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition id='dimension1'
+                                name="Month"
+                                value="{Month}" />
+                        </viz.data:dimensions>
+                        <!-- y축  -->
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition id='measure1'
+                                name="Sales"
+                                value="{Sales}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id="feeditem1"
+                        xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+                        uid="valueAxis"
+                        type="Measure"
+                        values="Sales" />
+                    <viz.feeds:FeedItem id='feeditem2'
+                        uid="categoryAxis"
+                        type="Dimension"
+                        values="Month" />
+                </viz:feeds>
+            </viz:VizFrame>
+
+            <viz:VizFrame id="idDonutChart"
+                height='300px'
+                width="100%"
+                vizType='donut'>
+                <viz:dataset>
+                    <viz.data:FlattenedDataset id="flattened_data_set2"
+                        data="{donut>/data}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition id ="dimension2"
+                                name="category"
+                                value="{data>category}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition id='measure2'
+                                name="value"
+                                value="{value}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id ="feed2_measure"
+                        uid="size"
+                        type="Measure"
+                        values="value" />
+                    <viz.feeds:FeedItem id="feed2_dimension"
+                        uid="color"
+                        type="Dimension"
+                        values="category" />
+                </viz:feeds>
+                <viz:dependents>
+                    <viz:Popover id="idPopOver"></viz:Popover>
+                </viz:dependents>
+            </viz:VizFrame>
+
+        </content>
+    </Page>
+</mvc:View>

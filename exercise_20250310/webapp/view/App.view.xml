@@ -1,0 +1,60 @@
+<mvc:View controllerName="exercise20250310.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <App id="app">
+        <Page id='page1'
+            title="{i18n>title}">
+            <mvc:XMLView id ="view1"
+                viewName="exercise20250310.view.Search"></mvc:XMLView>
+            <Table id='table1'
+                items="{/ZCARR_D17Set}"
+                mode="SingleSelect">
+                <columns>
+                    <Column id='Carrid'>
+                        <header>
+                            <Label id='Carrid_label'
+                                text="Carrid"></Label>
+                        </header>
+                    </Column>
+
+                    <Column id='Carrname'>
+                        <header>
+                            <Label id='Carrname_label'
+                                text="Carrname"></Label>
+                        </header>
+                    </Column>
+
+                    <Column id='Currcode'>
+                        <header>
+                            <Label id='Currcode_label'
+                                text="Currcode"></Label>
+                        </header>
+                    </Column>
+
+                    <Column id='URL'>
+                        <header>
+                            <Label id='URL_label'
+                                text="URL"></Label>
+                        </header>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id='columnListItem'>
+                        <cells>
+                            <Text id='carrid_text'
+                                text="{Carrid}"></Text>
+                            <Text id='carrname_text'
+                                text="{Carrname}"></Text>
+                            <Text id='currcode_text'
+                                text="{Currcode}"></Text>
+                            <Link id='url_text'
+                                text="{Url}"
+                                href="{Url}"></Link>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </Page>
+    </App>
+</mvc:View>

@@ -5,18 +5,54 @@
     <List headerText="{i18n>title}"
         id="list1"
         class="sapUiResponsiveMargin"
-        width="auto">
-
+        width="auto"
+        items="{
+         path : 'orders>/order'
+        }">
         <headerToolbar>
             <Toolbar id="toolbar1">
-
-                <Title id ='toolbar_title'
-                    text="{i18n>toolbartitle}">
-                </Title>
+                <ToolbarSpacer id='toolbarspacer1'></ToolbarSpacer>
                 <CheckBox id='checkbox1'
                     text="배송완료"></CheckBox>
-
+                <Button id='button1'
+                    text='재고 부족'
+                    type="Emphasized"
+                    press=".onButton"></Button>
+                <SearchField id='input1'
+                    placeholder="상품명 검색"
+                    width="30%"
+                    search=".onFilter"></SearchField>
             </Toolbar>
         </headerToolbar>
+
+        <items>
+            <ObjectListItem id ='listitem1'
+                intro="{orders>orderId}"
+                
+                
+                title ="{orders>product}"
+                number="{
+                    parts: [
+                        'orders>price',
+                        'view>/currency'
+                    ],
+                    type: 'sap.ui.model.type.Currency',
+                    formatOptions: {
+                        showMeasure: false
+                    }
+                }"
+                numberUnit="{view>/currency}">
+                <firstStatus>
+                    <ObjectStatus id='objsta1'
+                        text="{orders>status}"
+                        state="{= ${orders>status} === '배송완료' ? 'Success' : 'Error' }">
+                    </ObjectStatus>
+                </firstStatus>
+                <secondStatus>
+                    <ObjectStatus id='objsta2'
+                        text="{= ${orders>status} === '배송완료' ? '배송일: ' + ${orders>date/delivery} : '' }"></ObjectStatus>
+                </secondStatus>
+            </ObjectListItem>
+        </items>
     </List>
 </mvc:View>
