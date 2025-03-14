@@ -17,17 +17,15 @@
                     vizProperties="{title:{text: 'Stock Line Chart'}
                     }"
                     width="100%"
-                    height="680px">
+                    height="400px">
                     <viz:dataset>
                         <viz.data:FlattenedDataset id="flattenedDataset"
                             data="{chart>/data}">
                             <viz.data:dimensions>
-                                <viz.data:DimensionDefinition id="dimensionDefinitionProductName"
-                                    name="제품명"
-                                    value="{ProductName}" />
+                                <!-- <viz.data:DimensionDefinition id="dimensionDefinitionProductName" name="제품명" value="{ProductName}" /> -->
                                 <viz.data:DimensionDefinition id="dimensionDefinitionProductID"
-                                    name="제품 아이디"
-                                    value="{ProductID}" />
+                                    name="제품명"
+                                    value="{ProductInfo}" />
                             </viz.data:dimensions>
                             <viz.data:measures>
                                 <viz.data:MeasureDefinition id="measureDefinition"
@@ -45,11 +43,11 @@
                             uid="categoryAxis"
                             type="Dimension"
                             values="제품명" />
-                        <viz.feeds:FeedItem id="productIDFeed"
-                            uid="categoryAxis"
-                            type="Dimension"
-                            values="제품 아이디" />
+                        <!-- <viz.feeds:FeedItem id="productIDFeed" uid="categoryAxis" type="Dimension" values="제품 아이디" /> -->
                     </viz:feeds>
+                    <viz:dependents>
+                        <viz:Popover id="idPopOver"></viz:Popover>
+                    </viz:dependents>
                 </viz:VizFrame>
             </items>
         </VBox>

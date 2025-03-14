@@ -1,0 +1,42 @@
+<mvc:View controllerName="exerciserouting.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="page1"
+        title="{i18n>title}"
+        showNavButton="true"
+        navButtonPress=".onGoBack">
+        <VBox id='vbox'
+            class="sapUiSmallMargin">
+            <f:SimpleForm id="SimpleFormChange354"
+                editable="false"
+                layout="ResponsiveGridLayout"
+                title="Detail 정보"
+                singleContainerFullSize="false">
+
+                <Label id='label_id_name'
+                    text="이름" />
+                <Text id='text_id_name'
+                    text="{detailModel>/key2}" />
+
+                <Label id ='213'
+                    text="번호" />
+                <Text id='text_id_number'
+                    text="{detailModel>/key1}" />
+
+
+                <Label id ='234'
+                    text="성별" />
+                <Text id='text_id_gender'
+                    text="{detailModel>/key3}" />
+
+                <Label id ='221323'
+                    text="생년월일" />
+                <Text id='text_id_birthdate'
+                    text="{detailModel>/key4}" />
+
+
+            </f:SimpleForm>
+        </VBox>
+    </Page>
+</mvc:View>

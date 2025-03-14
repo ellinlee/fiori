@@ -1,0 +1,70 @@
+<mvc:View controllerName="exerciserouting.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table">
+    <Page id="page"
+        title="{i18n>title}">
+        <content>
+            <Button id='button1_main'
+                text="Go detail"
+                press=".onPress"></Button>
+            <Input id='input1_main'
+                width="30%"></Input>
+        </content>
+        <content>
+            <Table id="table1"
+                items="{student>/student}"
+                mode="SingleSelect">
+                <columns>
+                    <Column id='column_1'>
+                        <header>
+                            <Label id='no_label'
+                                text='Number'>
+                            </Label>
+                        </header>
+                    </Column>
+                    <Column id='column_2'>
+                        <header>
+                            <Label id='name_label'
+                                text='Name'>
+                            </Label>
+                        </header>
+                    </Column>
+
+                    <Column id='column_3'>
+                        <header>
+                            <Label id='gender_label'
+                                text='Gender'>
+                            </Label>
+                        </header>
+                    </Column>
+
+                    <Column id='column_4'>
+                        <header>
+                            <Label id='birthdate_label'
+                                text='Birthdate'>
+                            </Label>
+                        </header>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id='columnListItem'>
+                        <cells>
+                            <Text id='no_text'
+                                text="{student>no}"></Text>
+                            <Text id='name_text'
+                                text="{student>name}"></Text>
+                            <Text id='gender_text'
+                                text="{student>gender}"></Text>
+                            <Text id='birthdate_text'
+                                text="{student>birthdate}"></Text>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

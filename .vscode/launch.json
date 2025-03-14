@@ -731,6 +731,236 @@
         "env": {
             "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
         }
+    },
+    {
+        "name": "Start exercise_20250313_routing",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/exercise_20250313_routing",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--open",
+            "test/flpSandbox.html#exercise20250313routing-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "DEBUG": "--inspect",
+            "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+        }
+    },
+    {
+        "name": "Start exercise_20250313_routing Local",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/exercise_20250313_routing",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--config",
+            "./ui5-local.yaml",
+            "--open",
+            "test/flpSandbox.html#exercise20250313routing-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+        }
+    },
+    {
+        "name": "Start exercise_routing",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/exercise_routing",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--open",
+            "test/flpSandbox.html#exerciserouting-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "DEBUG": "--inspect",
+            "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+        }
+    },
+    {
+        "name": "Start exercise_routing Local",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/exercise_routing",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--config",
+            "./ui5-local.yaml",
+            "--open",
+            "test/flpSandbox.html#exerciserouting-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+        }
+    },
+    {
+        "name": "Start exercise_20250314_s",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/exercise_20250314_s",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--open",
+            "test/flpSandbox.html#exercise20250314s-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "DEBUG": "--inspect",
+            "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+        }
+    },
+    {
+        "name": "Start exercise_20250314_s Local",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/exercise_20250314_s",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--config",
+            "./ui5-local.yaml",
+            "--open",
+            "test/flpSandbox.html#exercise20250314s-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+        }
+    },
+    {
+        "name": "Start exercise_20250314_total",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/exercise_20250314_total",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--open",
+            "test/flpSandbox.html#exercise20250314total-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "DEBUG": "--inspect",
+            "FIORI_TOOLS_URL_PARAMS": "sap-client=100&sap-ui-xx-viewCache=false"
+        }
+    },
+    {
+        "name": "Start exercise_20250314_total Local",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/exercise_20250314_total",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--config",
+            "./ui5-local.yaml",
+            "--open",
+            "test/flpSandbox.html#exercise20250314total-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "FIORI_TOOLS_URL_PARAMS": "sap-client=100&sap-ui-xx-viewCache=false"
+        }
+    },
+    {
+        "name": "Start exercise_20250314_total Mock",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}/exercise_20250314_total",
+        "runtimeExecutable": "npx",
+        "windows": {
+            "runtimeExecutable": "npx.cmd"
+        },
+        "runtimeArgs": [
+            "fiori",
+            "run"
+        ],
+        "args": [
+            "--config",
+            "./ui5-mock.yaml",
+            "--open",
+            "test/flpSandbox.html#exercise20250314total-display"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+        "outputCapture": "std",
+        "env": {
+            "FIORI_TOOLS_URL_PARAMS": "sap-client=100&sap-ui-xx-viewCache=false"
+        }
     }
   ]
 }

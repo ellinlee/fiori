@@ -3,5 +3,31 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <App id="app">
+        <IconTabBar id="idIconTabBarNoIcons"
+            class="sapUiResponsiveContentPadding">
+            <items>
+                <IconTabFilter id ='1'
+                    text="OrderList"
+                    key="OrderList">
+
+                </IconTabFilter>
+                <IconTabFilter text="Customer Table"
+                    key="CustomerTable">
+                    <content>
+
+                    </content>
+                </IconTabFilter>
+                <IconTabFilter text="Discount Chart"
+                    key="Discount Chart">
+                    <content>
+
+                    </content>
+                </IconTabFilter>
+                <IconTabFilter text="OrderChart"
+                    key="OrderChart">
+
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
     </App>
 </mvc:View>

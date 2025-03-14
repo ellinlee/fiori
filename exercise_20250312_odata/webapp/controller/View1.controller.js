@@ -16,6 +16,11 @@ sap.ui.define(
               .sort((a, b) => b.UnitsInStock - a.UnitsInStock)
               .slice(0, 5);
 
+            aTop5Products.forEach((element) => {
+              element.ProductInfo =
+                element.ProductID + " " + element.ProductName;
+            });
+
             var oChartModel = new JSONModel({ data: aTop5Products });
 
             this.getView().setModel(oChartModel, "chart");

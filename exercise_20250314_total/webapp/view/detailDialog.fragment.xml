@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="updateDialog"
+        title="상세 정보"
+        icon="sap-icon://information">
+        <content>
+            <VBox id='vbox_dialog'>
+                <Text id='text_name_dialog'
+                    text="이름 : "></Text>
+                <Text id='text_class_dialog'
+                    text="Class : "></Text>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button id='ok_button_dialog'
+                text="OK"
+                press=".onOKDialog"
+                type="Emphasized"/>
+        </beginButton>
+    </Dialog>
+</core:FragmentDefinition>

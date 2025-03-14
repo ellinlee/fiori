@@ -1,0 +1,10 @@
+/* Enter your custom styles here */
+.sapMListTblHeaderCell,
+.sapMListTblCell {
+  border: 1px solid #ccc; /* 테이블 선 추가 */
+  text-align: center; /* 셀 내부 중앙 정렬 */
+}
+
+.sapMTable {
+  border-collapse: collapse;
+}

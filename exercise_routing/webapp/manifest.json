@@ -1,7 +1,7 @@
 {
-  "_version": "1.60.0",
+  "_version": "1.65.0",
   "sap.app": {
-    "id": "mentoring0311",
+    "id": "exerciserouting",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,27 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.16.5",
-      "toolsId": "3bd467f3-950b-4fed-9308-84adbe5aa49e"
-    },
-    "dataSources": {
-      "mainService": {
-        "uri": "/sap/opu/odata/sap/ZSCUSTOM_MD17_SRV/",
-        "type": "OData",
-        "settings": {
-          "annotations": [],
-          "localUri": "localService/mainService/metadata.xml",
-          "odataVersion": "2.0"
-        }
-      },
-      "northwindService": {
-        "uri": "/northwind/northwind.svc/",
-        "type": "OData",
-        "settings": {
-          "annotations": [],
-          "localUri": "localService/northwindService/metadata.xml",
-          "odataVersion": "2.0"
-        }
-      }
+      "toolsId": "31dbda9d-0c3c-4633-b940-e9ee1cec0a51"
     }
   },
   "sap.ui": {
@@ -53,9 +33,9 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": false,
+    "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.120.0",
+      "minUI5Version": "1.133.0",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {}
@@ -69,18 +49,12 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "mentoring0311.i18n.i18n"
+          "bundleName": "exerciserouting.i18n.i18n"
         }
       },
-      "": {
-        "dataSource": "mainService",
-        "preload": true,
-        "settings": {}
-      },
-      "northwindModel": {
-        "dataSource": "northwindService",
-        "preload": true,
-        "settings": {}
+      "student": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "student.json"
       }
     },
     "resources": {
@@ -98,26 +72,36 @@
         "transition": "slide",
         "type": "View",
         "viewType": "XML",
-        "path": "mentoring0311.view",
+        "path": "exerciserouting.view",
         "async": true,
-        "viewPath": "mentoring0311.view"
+        "viewPath": "exerciserouting.view"
       },
       "routes": [
         {
-          "name": "RouteView",
+          "name": "RouteMain",
           "pattern": ":?query:",
-          "target": ["TargetView"]
+          "target": ["TargetMain"]
+        },
+        {
+          "name": "RouteDetail",
+          "pattern": "Detail/{key1}:key2::key3::key4:",
+          "target": ["TargetDetail"]
         }
       ],
       "targets": {
-        "TargetView": {
-          "id": "View",
-          "name": "View"
+        "TargetMain": {
+          "id": "Main",
+          "name": "Main"
+        },
+        "TargetDetail": {
+          "viewType": "XML",
+          "viewId": "Detail",
+          "viewName": "Detail"
         }
       }
     },
     "rootView": {
-      "viewName": "mentoring0311.view.App",
+      "viewName": "exerciserouting.view.App",
       "type": "XML",
       "id": "App"
     }

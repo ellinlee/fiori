@@ -1,0 +1,65 @@
+<mvc:View controllerName="exercise20250314total.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <App id="app">
+        <Shell id="app_shell">
+            <Panel id="app_panel">
+                <Toolbar id='app_toolbar1'>
+                    <HBox id="app_hbox">
+                        <Text id="app_title"
+                            text="CLASS"></Text>
+                    </HBox>
+                </Toolbar>
+                <VBox id='flexbox'>
+                    <HBox id='sum'
+                        justifyContent="SpaceBetween"
+                        width="100%">
+                        <Title id='tt'
+                            text='조회조건'
+                            class="sapUiSmallMargin"></Title>
+                        <HBox id="b1"
+                            class="sapUiSmallMargin"
+                            alignItems="End">
+                            <Button id='app_search_button'
+                                text='검색'></Button>
+                            <Button id='app_chart_button'
+                                text='차트'></Button>
+                        </HBox>
+                    </HBox>
+                    <HBox id='v'
+                        class="sapUiSmallMargin"
+                        justifyContent="Center"
+                        alignItems="Center"
+                        width="100%">
+                        <Label id="app_hbox_label"
+                            text="CLASS"
+                            required="true"
+                            class="sapUiSmallMargin"></Label>
+                        <Input id="app_hbox_input"
+                            placeholder="Class"
+                            width="auto"></Input>
+                        <Select id="select"
+                            selectedKey="{/teacher}">
+                            <items>
+                                <core:Item id="selectall"
+                                    key="all"
+                                    text="전체"/>
+                                <core:Item id="selectFemale"
+                                    key="Female"
+                                    text="여성"/>
+
+                                <core:Item id="selectMale"
+                                    key="Male"
+                                    text="남성"/>
+                            </items>
+                        </Select>
+                    </HBox>
+                </VBox>
+                <mvc:XMLView id='viewconnect'
+                    viewName="exercise20250314total.view.table"></mvc:XMLView>
+            </Panel>
+        </Shell>
+    </App>
+</mvc:View>
