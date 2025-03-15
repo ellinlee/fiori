@@ -1,14 +1,17 @@
 <core:FragmentDefinition xmlns="sap.m"
     xmlns:core="sap.ui.core">
-    <Dialog id="updateDialog"
+    <Dialog id="detailDialog"
         title="상세 정보"
         icon="sap-icon://information">
-        <content>
-            <VBox id='vbox_dialog'>
+        <content >
+            <VBox id='vbox_dialog' class="sapUiSmallMargin">
+            <!-- 데이터 가져올 때는 모델>/필드 -->
                 <Text id='text_name_dialog'
-                    text="이름 : "></Text>
+                    text="이름 : {selectedDataModel>/Name}"></Text>
                 <Text id='text_class_dialog'
-                    text="Class : "></Text>
+                    text="클래스 : {selectedDataModel>/Class}"></Text>
+                <Text id='text_gender_dialog'
+                    text="성별: {selectedDataModel>/Gender}"></Text>
             </VBox>
         </content>
         <beginButton>

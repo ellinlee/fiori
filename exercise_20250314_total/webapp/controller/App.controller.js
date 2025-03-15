@@ -11,6 +11,15 @@ sap.ui.define(
 
         this.getView().setModel(oDataModel, "teacher");
       },
+      onSearch(){
+        // 검색어 가져오기
+        // var sSearch = this.getView().byId("app_hbox_input").getValue();
+      
+      },
+      onChart(){
+        
+      }
     });
+
   }
 );

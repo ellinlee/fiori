@@ -23,9 +23,11 @@
                             class="sapUiSmallMargin"
                             alignItems="End">
                             <Button id='app_search_button'
-                                text='검색'></Button>
+                                text='검색'
+                                press=".onSearch"></Button>
                             <Button id='app_chart_button'
-                                text='차트'></Button>
+                                text='차트'
+                                press=".onChart"></Button>
                         </HBox>
                     </HBox>
                     <HBox id='v'
