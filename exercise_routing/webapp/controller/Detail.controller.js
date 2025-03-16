@@ -21,9 +21,6 @@ sap.ui.define(
 
         // 3. 뷰에 "detailModel"로 모델 설정
         this.getView().setModel(oModel, "detailModel");
-
-        // ✅ 모델이 정상적으로 생성되었는지 로그 출력
-        console.log("Model Data:", oModel.getData());
       },
 
       onGoBack() {
