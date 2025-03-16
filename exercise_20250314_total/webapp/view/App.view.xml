@@ -4,8 +4,9 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
     <App id="app">
-        <Shell id="app_shell">
-            <Panel id="app_panel">
+        <pages>
+            <Page id="page"
+                title="Title">  <!-- Title -->    
                 <Toolbar id='app_toolbar1'>
                     <HBox id="app_hbox">
                         <Text id="app_title"
@@ -49,19 +50,81 @@
                                     key="all"
                                     text="전체"/>
                                 <core:Item id="selectFemale"
-                                    key="Female"
+                                    key="여성"
                                     text="여성"/>
 
                                 <core:Item id="selectMale"
-                                    key="Male"
+                                    key="남성"
                                     text="남성"/>
                             </items>
                         </Select>
                     </HBox>
                 </VBox>
-                <mvc:XMLView id='viewconnect'
-                    viewName="exercise20250314total.view.table"></mvc:XMLView>
-            </Panel>
-        </Shell>
+
+
+
+            
+            <Table id='table1'
+            items="{/zteacher_d17Set}"
+            mode="MultiSelect">
+            <columns>
+                <Column id="Name"
+                    hAlign="Center">
+                    <header>
+                        <Label id='Name_label'
+                            text="Name"
+                            textAlign="Center"></Label>
+                    </header>
+                </Column>
+
+                <Column id="Class"
+                    hAlign="Center">
+                    <header>
+                        <Label id='Class_label'
+                            text="Class"
+                            textAlign="Center"></Label>
+                    </header>
+                </Column>
+
+                <Column id="Gender"
+                    hAlign="Center">
+                    <header>
+                        <Label id='Gender_label'
+                            text="Gender"
+                            textAlign="Center"></Label>
+                    </header>
+                </Column>
+
+                <Column id="Detail"
+                    hAlign="Center">
+                    <header>
+                        <Label id='Detail_label'
+                            text="Details"
+                            textAlign="Center"></Label>
+                    </header>
+                </Column>
+            </columns>
+
+            <items >
+                <ColumnListItem id='columnListItem'>
+                    <cells>
+                        <Text id='name_text'
+                            text="{Name}"
+                            textAlign="Center"></Text>
+                        <Text id='class_text'
+                            text="{Class}"
+                            textAlign="Center"></Text>
+                        <Text id='gender_text'
+                            text="{Gender}"
+                            textAlign="Center"></Text>
+                        <Button id="detail_button"
+                            text="Button"
+                            press=".onPress"></Button>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        </Page>
+    </pages>    
     </App>
 </mvc:View>
