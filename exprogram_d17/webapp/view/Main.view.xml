@@ -1,0 +1,86 @@
+<mvc:View controllerName="cl4.exprogramd17.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Page id="page"
+        title="{i18n>title}">
+        <Panel id="panel1_main"
+            width="auto"
+            class="sapUiSmallMargin">
+            <headerToolbar>
+                <Toolbar id='toolbar1_main'>
+                    <ToolbarSpacer id='toolbarspacer1_main'></ToolbarSpacer>
+                    <Button id='button1_main'
+                        press=".onEnrollPress"
+                        
+                        icon = "sap-icon://employee-pane"
+                        text="{i18n>enrollmentButton}"></Button>
+                </Toolbar>
+            </headerToolbar>
+
+            <Table id='table1_main'
+                items="{/MemberSet}"
+                mode="SingleSelectMaster"
+                itemPress=".onPress">
+                <columns>
+                    <Column id="id_column_main">
+                        <header>
+                            <Label id="id_label_main"
+                                text="{i18n>id}"></Label>
+                        </header>
+                    </Column>
+
+                    <Column id="name_column_main">
+                        <header>
+                            <Label id="name_label_main"
+                                text="{i18n>name}"></Label>
+                        </header>
+                    </Column>
+
+                    <Column id="birthdate_column_main">
+                        <header>
+                            <Label id="birthdate_label_main"
+                                text="{i18n>birthDate}"></Label>
+                        </header>
+                    </Column>
+
+                    <Column id="email_column_main">
+                        <header>
+                            <Label id="email_label_main"
+                                text="{i18n>email}"></Label>
+                        </header>
+                    </Column>
+
+                </columns>
+                <items>
+                    <ColumnListItem id='columnListItem'
+                        type="Navigation">
+                        <cells>
+                            <Text id='id_text_Main'
+                                text="{Id}"></Text>
+
+                            <Text id='name_text_Main'
+                                text="{Name}"></Text>
+
+                            <Text id='birthdate_text_Main'
+                                text="{
+                                    path: 'Bdate',
+                                    type: 'sap.ui.model.type.Date',
+				                    formatOptions: {
+					                    
+                                        pattern :
+                                        'yyyy-MM-dd'
+				                        }
+                                    
+                                    }">
+                            </Text>
+                            <Text id='email_text_Main'
+                                text="{Email}"></Text>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </Panel>
+    </Page>
+</mvc:View>
+

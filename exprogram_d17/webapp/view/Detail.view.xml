@@ -1,0 +1,57 @@
+<mvc:View controllerName="cl4.exprogramd17.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="page1"
+        title="{i18n>title}"
+        showNavButton="true"
+        navButtonPress=".onGoBack">
+        <Panel id="panel1"
+            class="sapUiSmallMargin">
+            <VBox id="232">
+                <f:SimpleForm id='123'>
+                    <Label id="id_label_detail"
+                        text="{i18n>customerID}"></Label>
+                    <Text id="id_text_detail"
+                        text="{detailModel>/key1}"></Text>
+                    <Label id="name_label_detail"
+                        text="{i18n>customername}"></Label>
+                    <Text id="name_text_detail"
+                        text="{detailModel>/key2}"></Text>
+                    <Label id="bdate_label_detail"
+                        text="{i18n>bdateD}"></Label>
+                    <Text id="bdate_text_detail"
+                        text="{detailModel>/key3}"></Text>
+                    <Label id="gender_label_detail"
+                        text="{i18n>gnederD}"></Label>
+                    <Text id="gender_text_detail"
+                        text="{detailModel>/key4}"></Text>
+                    <Label id="city_label_detail"
+                        text="{i18n>cityD}"></Label>
+                    <Text id="city_text_detail"
+                        text="{detailModel>/key5}"></Text>
+                    <Label id="country_label_detail"
+                        text="{i18n>countryD}"></Label>
+                    <Text id="country_text_detail"
+                        text="{detailModel>/key6}"></Text>
+                    <Label id="pNum_label_detail"
+                        text="{i18n>pNumD}"></Label>
+                    <Text id="pNum_text_detail"
+                        text="{detailModel>/key7}"></Text>
+                    <Label id="eMail_label_detail"
+                        text="{i18n>emailD}"></Label>
+                    <Text id="eMailtext_detail"
+                        text="{detailModel>/key8}"></Text>
+                </f:SimpleForm>
+
+
+                <Button id="back_button_detail"
+                    text="{i18n>goToMain}"
+                    press=".onGoBack"></Button>
+            </VBox>
+
+
+        </Panel>
+
+    </Page>
+</mvc:View>

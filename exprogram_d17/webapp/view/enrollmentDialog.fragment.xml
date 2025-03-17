@@ -1,0 +1,73 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="enrollmentDialog"
+        
+        
+    title ="{i18n>enrollmentTitle}">
+        <content>
+            <VBox id='vbox_enrollment_dialog'
+                class="sapUiSmallMargin">
+                <Label id="name_label_enroll_dialog"
+                    text="{i18n>enrollName}"
+                    required="true"></Label>
+                <Input id="name_input_enroll_dialog"
+                    width="auto"></Input>
+
+                <Label id="birthdate_label_enroll_dialog"
+                    text="{i18n>birthDateE}"
+                    required="true"></Label>
+                <DatePicker id="DP_enroll_dialog"
+                    valueFormat="yyyy-MM-dd"
+                    displayFormat="medium"
+                    placeholder="YYYY-MM-DD"
+                    width="auto"/>
+
+
+                <Label id="gender_label_enroll_dialog"
+                    text="{i18n>gender}"
+                    required="true"></Label>
+                <Input id="gender_input_enroll_dialog"
+                    placeholder="{i18n>enrollgender_placeholder}"
+                    width="auto"></Input>
+
+                <Label id="city_label_enroll_dialog"
+                    text="{i18n>city}"
+                    required="true"></Label>
+                <Input id="city_input_enroll_dialog"
+                    width="auto"></Input>
+
+                <Label id="country_label_enroll_dialog"
+                    text="{i18n>country}"
+                    required="true"></Label>
+                <Input id="country_input_enroll_dialog"
+                    placeholder="{i18n>enrollcty_placeholder}"
+                    width="auto"></Input>
+
+                <Label id="pnum_label_enroll_dialog"
+                    text="{i18n>pnum}"
+                    required="true"></Label>
+                <Input id="pnum_input_enroll_dialog"
+                    width="auto"></Input>
+
+                <Label id="email_label_enroll_dialog"
+                    text="{i18n>email}"
+                    required="true"></Label>
+                <Input id="email_input_enroll_dialog"
+                    width="auto"></Input>
+
+            </VBox>
+        </content>
+        <beginButton>
+            <Button id='save_button_dialog'
+                text="{i18n>dialogSaveButtonText}"
+                type="Emphasized"
+                press=".onSaveDialog"/>
+        </beginButton>
+        <endButton>
+            <Button id='close_button_dialog'
+                text="{i18n>dialogCloseButtonText}"
+                type="Reject"
+                press=".onCloseDialog"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
