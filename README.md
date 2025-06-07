@@ -33,4 +33,4 @@ This project is for educational purposes and does not have a specific license.
 
 ## Contact
 
-For any inquiries or discussions, feel free to reach out via [your email or GitHub profile link].
+For any inquiries or discussions, feel free to reach out via my email.
